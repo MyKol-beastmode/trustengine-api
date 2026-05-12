@@ -9,11 +9,10 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 import os, uuid, datetime, json, re
 
-from trust_engine_v2.analyzers.review_analyzer  import analyze_review_text
-from trust_engine_v2.analyzers.scam_analyzer import analyze_scam_text
-from trust_engine_v2.result_model import create_result
-from trust_engine_v2.response_builder import build_response
-
+from analyzers.review_analyzer import analyze_review_text
+from analyzers.scam_analyzer import analyze_scam_text
+from result_model import create_result
+from response_builder import build_response
 load_dotenv()
 
 app = Flask(__name__)
